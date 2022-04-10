@@ -7,7 +7,10 @@
 '''  
 p = 0.20
 n = 3
-# exact
 dgeom(x = n, prob = p)
 '''  
+
+Output :  
+[1] 0.1024  
+
 
