@@ -85,9 +85,8 @@ B. Gambarkan grafik histogram berdasarkan kasus tersebut.
 hist(rbinom(x, n, prob = p), xlab = "X", ylab = "Frekuensi", main = "Histogram bilangan binomial")
 ```  
   
-```r
 <img width="257" alt="image" src="https://user-images.githubusercontent.com/82170943/162623541-31619baa-0746-4366-9569-3bf7477a529c.png">
-```  
+  
   
 C. Nilai Rataan (μ) dan Varian (σ²) dari DistribusiBinomial.  
 ```r
@@ -246,9 +245,9 @@ hist(rexp(n = 10000, rate = lamda))
 ```  
   
 Output :  
-```r
+
 <img width="327" alt="image" src="https://user-images.githubusercontent.com/82170943/162624191-e52d693d-d6c7-4f7f-a565-5eec78c26c49.png">
-```  
+
   
 C. Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Exponensial untuk n = 100 dan λ = 3
   
@@ -266,3 +265,35 @@ Output :
   
   
 ## Soal No 6  
+Diketahui generate random nilai sebanyak 100 data, mean = 50, sd = 8. Tentukan  
+  
+A. Fungsi Probabilitas dari Distribusi Normal P(X1 ≤ x ≤ X2), hitung Z-Score Nya dan plot data generate randomnya dalam bentuk grafik. Petunjuk(gunakan fungsi plot()).  
+```r
+norm_dist_i <- rnorm(N,Mean,Std_dev_i)
+x1 <- floor(mean(norm_dist_i))
+x2 <- ceiling(mean(norm_dist_i))
+z_score <- ((norm_dist_i - mean(norm_dist_i))/ (sd(norm_dist_i)))
+plot(z_score, type = 'p', col='blue') 
+```  
+  
+B. Generate Histogram dari Distribusi Normal dengan breaks 50 dan format penamaan:  
+```r
+hist(norm_dist_i,50,main = "5025201087_Daniel Hermawan_Probstat_C_DNhistogram ")  
+```  
+  
+C. Nilai Varian (σ²) dari hasil generate random nilai Distribusi Normal.  
+```r
+ std_dev_ii <- sd(norm_dist_i)
+  variansi <- std_dev_ii * std_dev_ii
+  variansi 
+```  
+  
+Output :
+```r
+[1] 20  
+```  
+  
+  
+# Terima Kasih.
+
+
